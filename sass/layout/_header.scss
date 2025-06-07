@@ -1,0 +1,82 @@
+header{
+    height: 100vh;
+    background: $pure-white;
+
+}
+
+.navbar{
+    @include flex-center;
+    &__link{
+        cursor: pointer;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        &__li{
+            font-family: $font-primary-extra-light;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 24px;
+            cursor: pointer;
+        }
+        &__btn{
+            padding: 11px 20px;
+            border: none;
+            background: $dark-bg;
+            border-radius: 10px;
+            cursor: pointer;
+
+            color: $pure-white;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+
+        }
+    }
+}
+.hero{
+    background: $light-cream;
+    display: flex;
+    height: 91vh;
+    &__content{
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 77px;
+        padding-top: 60px;
+
+        &__span{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 2px;
+            color: $muted-brown;
+        }
+        &__tittle{
+            font-family: $font-primary-bold;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 70.4px;
+            margin-top: 20px;
+        }
+        &__p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 18px;
+        }
+        &__btn{
+            margin-top: 30px;
+            padding: 11px 20px;
+            border: none;
+            background: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+            cursor: pointer;
+        }
+    }
+}
