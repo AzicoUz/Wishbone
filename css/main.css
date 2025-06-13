@@ -1,30 +1,39 @@
 header {
-  height: 100vh;
-  background: #FFFFFF;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .navbar {
+  background: #FFFFFF;
+  position: relative;
+  z-index: 1000;
+}
+.navbar__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar__link {
+.navbar__logo {
   cursor: pointer;
+}
+.navbar__logo img {
+  max-width: 120px;
 }
 .navbar__menu {
   display: flex;
   align-items: center;
   -moz-column-gap: 32px;
        column-gap: 32px;
+  list-style: none;
 }
-.navbar__menu__li {
+.navbar__menu .navbar__item {
   font-family: "Poppins-ExtraLight", sans-serif;
   font-weight: 900;
   font-size: 15px;
   line-height: 24px;
   cursor: pointer;
 }
-.navbar__menu__btn {
+.navbar__menu .navbar__btn {
   padding: 11px 20px;
   border: none;
   background: #1B1A1A;
@@ -35,54 +44,136 @@ header {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.4px;
+  transition: background 0.5s, color 0.5s;
+}
+.navbar__menu .navbar__btn:hover {
+  background: #F7F7F7;
+  color: #1B1A1A;
+}
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.navbar__hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1B1A1A;
+  display: block;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
+@media (max-width: 991px) {
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    display: none;
+  }
+  .navbar__menu.active {
+    display: flex;
+  }
+  .navbar__menu .navbar__btn {
+    width: 100%;
+    text-align: left;
+  }
+  .navbar__hamburger {
+    display: flex;
+  }
+}
 .hero {
-  background: #ECE7E4;
+  max-height: 100%;
   display: flex;
-  height: 91vh;
 }
-.hero__content {
+.hero__box {
+  flex: 1;
+}
+.hero__box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+.hero__box1__frame {
   max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
   margin-top: 77px;
-  padding-top: 60px;
 }
-.hero__content__span {
+.hero__box1__frame__span {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #645C55;
 }
-.hero__content__tittle {
+.hero__box1__frame__h1 {
+  padding-top: 20px;
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 400;
   font-size: 64px;
   line-height: 70.4px;
-  margin-top: 20px;
 }
-.hero__content__p {
+.hero__box1__frame__p {
+  padding: 18px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+<<<<<<< HEAD
   margin-top: 18px;
   max-width: 509px;
   width: 100%;
+=======
+  letter-spacing: 0%;
+>>>>>>> main
 }
-.hero__content__btn {
+.hero__box1__frame__btn {
   margin-top: 30px;
   padding: 11px 20px;
   border: none;
+  color: #1B1A1A;
+  cursor: pointer;
   background: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.4px;
-  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+}
+.hero__box1__frame__btn:hover {
+  background: #1B1A1A;
+  color: #FFFFFF;
 }
 
+@media (max-width: 991px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    rotate: 180deg;
+  }
+  .hero__box {
+    rotate: 180deg;
+    display: flex;
+  }
+  .hero__box1 {
+    padding: 20px 11px;
+  }
+  .hero__box1__frame__h1 {
+    font-weight: 200;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .hero__box2 {
+    width: 600px;
+    height: auto;
+    margin: auto;
+  }
+}
 @font-face {
   font-family: "Poppins-Black";
   src: url("../../assets/fonts/Poppins-Black.ttf") format("truetype");

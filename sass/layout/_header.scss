@@ -1,52 +1,19 @@
-header{
-    height: 100vh;
-    background: $pure-white;
-
+header {
+  width: 100%;
+  overflow-x: hidden;
 }
+.navbar {
+  background: $pure-white;
+  position: relative;
+  z-index: 1000;
 
-.navbar{
-    @include flex-center;
-    &__link{
-        cursor: pointer;
-    }
-    &__menu{
-        display: flex;
-        align-items: center;
-        column-gap: 32px;
-        &__li{
-            font-family: $font-primary-extra-light;
-            font-weight: 900;
-            font-size: 15px;
-            line-height: 24px;
-            cursor: pointer;
-        }
-        &__btn{
-            padding: 11px 20px;
-            border: none;
-            background: $dark-bg;
-            border-radius: 10px;
-            cursor: pointer;
-
-            color: $pure-white;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0.4px;
-
-        }
-    }
-}
-.hero{
-    background: $light-cream;
+  &__wrapper {
     display: flex;
-    height: 91vh;
-    &__content{
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 77px;
-        padding-top: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+<<<<<<< HEAD
         &__span{
             font-weight: 400;
             font-size: 14px;
@@ -80,5 +47,180 @@ header{
             letter-spacing: 0.4px;
             cursor: pointer;
         }
+=======
+  &__logo {
+    cursor: pointer;
+    img {
+      max-width: 120px;
+>>>>>>> main
     }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    list-style: none;
+
+    .navbar__item {
+      font-family: $font-primary-extra-light;
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+
+    .navbar__btn {
+      padding: 11px 20px;
+      border: none;
+      background: $dark-bg;
+      border-radius: 10px;
+      cursor: pointer;
+
+      color: $pure-white;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      transition: background 0.5s, color 0.5s;
+      }
+      .navbar__btn:hover {
+        background: $off-white;
+        color: $dark-bg;
+      }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: $dark-bg;
+      display: block;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    &__menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: $pure-white;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+
+      .navbar__btn {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &__hamburger {
+      display: flex;
+    }
+  }
+}
+
+.hero {
+  max-height: 100%;
+  display: flex;
+
+  &__box {
+    flex: 1;
+  }
+  &__box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    &__frame {
+      max-width: 600px;
+      margin-top: 77px;
+
+      &__span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+      }
+      &__h1 {
+        padding-top: 20px;
+        font-family: $font-primary-bold;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 70.4px;
+      }
+      &__p{
+        padding: 18px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+
+      }
+      &__btn{
+        margin-top: 30px;
+        padding: 11px 20px;
+        border: none;
+        color: $dark-bg;
+        cursor: pointer;
+        background: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        transition: background 0.5s, color 0.5s;
+      }
+      &__btn:hover {
+        background: $dark-bg;
+        color: $pure-white;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    rotate: 180deg;
+    &__box{
+        rotate: 180deg;
+        display: flex;
+    }
+    &__box1{
+        padding: 20px 11px;
+        &__frame{
+            &__h1{
+                font-weight: 200;
+                font-size: 50px;
+                line-height: 60px;
+
+            }
+        }
+
+    }
+    &__box2{
+        width: 600px;
+        height: auto;
+        margin: auto;
+    }
+  }
+    
 }
