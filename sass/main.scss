@@ -1,28 +1,28 @@
-@import 'base/variables';
-@import 'base/mixins';
-@import 'components/button';
-@import 'components/card';
-@import 'components/modal';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/grid';
-@import 'base/fonts';
-*{
-    margin: 0;
-    padding: auto;
-    box-sizing: border-box;
-    list-style: none;
+@import "base/variables";
+@import "base/mixins";
+@import "components/button";
+@import "components/card";
+@import "components/modal";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sections";
+@import "base/fonts";
+* {
+  margin: 0;
+  padding: auto;
+  box-sizing: border-box;
+  list-style: none;
 }
 body {
-    font-family: $font-primary-extra-light;
-    background-color: #f4f4f4;
-    color: $dark-bg;
-    overflow-x: hidden;
+  font-family: $font-primary-extra-light;
+  background-color: #f4f4f4;
+  color: $dark-bg;
+  overflow-x: hidden;
 }
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
 }
