@@ -46,16 +46,15 @@
   }
 }
 @media (max-width: 991px) {
-    .firm{
+    .firm {
         rotate: 180deg;
         display: flex;
         flex-direction: column;
-        &__box{
+        &__box {
             rotate: 180deg;
         }
-        &__box1{
+        &__box1 {
             display: none;
         }
     }
-    
 }
