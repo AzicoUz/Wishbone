@@ -9,31 +9,54 @@
 <body>
     <header>
         <nav>
-            <div class="container">
-                <div class="navbar">
-                    <a class="navbar__link" href="./index.html"><img src="./Images/logo/Combined-Shape.svg" alt="error"></a>
+            <nav class="navbar">
+                <div class="container navbar__wrapper">
+                    <a href="./index.html" class="navbar__logo">
+                        <img src="./Images/logo/Combined-Shape.svg" alt="Logo">
+                    </a>
+
                     <ul class="navbar__menu">
-                        <li class="navbar__menu__li">Projects</li>
-                        <li class="navbar__menu__li">About</li>
-                        <li class="navbar__menu__li">News</li>
-                        <li class="navbar__menu__li">Team</li>
-                        <li class="navbar__menu__li">Contact</li>
-                        <button class="navbar__menu__btn">Get Template</button>
+                        <li class="navbar__item">Projects</li>
+                        <li class="navbar__item">About</li>
+                        <li class="navbar__item">News</li>
+                        <li class="navbar__item">Team</li>
+                        <li class="navbar__item">Contact</li>
+                        <button class="navbar__btn">Get Template</button>
                     </ul>
+
+                    <div class="navbar__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
+            </nav>
+
         </nav>
+
         <div class="hero">
-            <div class="container">
-                <div class="hero__content">
-                    <span class="hero__content__span">Wishbone+Partners</span>
-                    <h1 class="hero__content__tittle">The home of beautiful architecture.</h1>
-                    <p class="hero__content__p">We are an architecture firm with a focus on beautiful but functional design. At its heart, we believe design is about usability and accessibility — these are the guiding principles for our work. Read more about our previous projects, our process and our team below.</p>
-                    <button class="hero__content__btn">Read more</button>
+            <div class="hero__box1 hero__box">
+                <div class="hero__box1__frame">
+                    <span class="hero__box1__frame__span">Wishbone+Partners</span>
+                    <h1 class="hero__box1__frame__h1">The home of beautiful architecture.</h1>
+                    <p class="hero__box1__frame__p">We are an architecture firm with a focus on beautiful but functional design. At its heart, we believe design is about usability and accessibility — these are the guiding principles for our work. Read more about our previous projects, our process and our team below.</p>
+                    <button class="hero__box1__frame__btn">Read more</button>
                 </div>
             </div>
-            <img src="./Images/first.jpg" alt="error" class="hero__img">
+            
+            <img src="./Images/first.jpg" alt="error" class="hero__box2 hero__box">
         </div>
     </header>
+
+
+    <script>
+        const hamburger = document.querySelector('.navbar__hamburger');
+        const menu = document.querySelector('.navbar__menu');
+
+         hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
